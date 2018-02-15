@@ -7,6 +7,10 @@ class MoviesController < ApplicationController
   	@movie = Movie.new(movie_params)
     @search = SearchMovie.new(@movie.title)
     @movies = @search.get_movies
+    if @movies.length == 0
+       flash[:notice] = "Il n'y a aucun résultat pour votre recherche"
+       redirect_to root_path
+    end
 
   end
 

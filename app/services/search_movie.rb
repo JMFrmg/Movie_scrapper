@@ -2,8 +2,9 @@ require 'themoviedb-api'
 
 class SearchMovie
 	def initialize(movie_title)
+		Dotenv.load
 		@movie_title = movie_title		
-		Tmdb::Api.key(ENV['moviedb_key'])
+		Tmdb::Api.key('4c77edcb39209d29208aee3e9d4676e3')
 	end
 
 	

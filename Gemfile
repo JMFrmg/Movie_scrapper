@@ -40,9 +40,10 @@ gem 'gravatar_image_tag'
 gem 'bootstrap'
 gem 'bootswatch'
 gem 'devise'
-#gem 'sqlite3'
+gem 'sqlite3'
 gem 'themoviedb-api'
-gem 'pg', '0.20.0'
+gem 'dotenv'
+#gem 'pg', '0.20.0'
 
 
 group :development, :test do
