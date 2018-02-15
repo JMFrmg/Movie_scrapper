@@ -1,0 +1,23 @@
+<h1>Liste des résultats</h1>
+<table>
+	<tr>
+		<th>Nom du film</th>
+		<th>Date de sortie</th>
+		<th>Producteur</th>
+		<th>Image</th>
+		
+	</tr>
+	<% @movies.each do |film| %>
+	<tr>
+		
+		<td><%=film.title %></td>
+		<td><%=film.release_date %></td>
+		<td><%=film.movie_director %></td>
+		<td> <% if film.poster_path %>
+    		 <img src="http://image.tmdb.org/t/p/w185/<%= film.poster_path %>" >  
+        <%end%></td>
+		
+		
+	</tr>
+	<% end %>
+</table>

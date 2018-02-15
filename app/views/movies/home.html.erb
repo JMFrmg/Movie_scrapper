@@ -1,0 +1,10 @@
+<h1>Rechercher un film</h1>
+<p> </p>
+<%= form_tag (movies_search_path) do %>
+
+ 
+    
+  <%= label_tag 'text', 'Titre du film :' %>
+  <%= text_field_tag 'title' %>
+  <%= submit_tag 'Rechercher' %>
+<% end %>
