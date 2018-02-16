@@ -1,24 +1,17 @@
-# README
+# Bienvenue dans mon script MovieScrapper!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Fonction :
+Ce programme n'a qu'une fonction. L'utilisateur doit entrer le nom d'un film et le script lui renvoie une page contenant la liste des films dont le titre correspond au nom renseigné.
 
-Things you may want to cover:
+## Fonctionnement :
+* La page home contient un formulaire classique.
+* Le contenu du champ renpli par l'utilisateur est transmis à la méthode search du controller Movies par une requête POST.
+* La méthode search crée un objet de la classe SearchMovie (/app/services/search_movie.rb) avec comme paramètre le nom transmis par l'utilisateur.
+* L'objet de la classe SearchMovie se connecte à l'API de MovieDB et effectue une recherche.
+* L'objet de la classe SearchMovie renvoie une liste des films à la méthode search du controlleur Movies.
+* En cas d'absence de résultat, un message flash informant l'utilisateur s'affiche et celui-ci est automatiquement redirigé vers la page home afin d'effectuer une nouvelle recherche s'il le souhaite.
+* Une page html contenant la liste des résultats est renvoyée à l'utilisateur avec pour chaque film son nom, le nom du réalisateur, la date de sortie et l'affiche.
 
-* Ruby version
+Le site est spartiate. L'esthétique est à améliorer. Je n'ai pas intégré de css, faute de temps...
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Bonne lecture !
